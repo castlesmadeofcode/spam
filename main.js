@@ -240,7 +240,17 @@ let customers = [
       }
     }
   ];
+//   From that array, extract just the customers' contact email addresses
+//    and store them in a new array.
+
+let customerEmails = [];
 
   customers.filter(customer => {
-      console.log(customer);
+      let emails = customer.contacts.email;
+      emails.forEach(email => {
+          customerEmails.push(email);
+
+      })
   })
+
+  console.log(customerEmails);
